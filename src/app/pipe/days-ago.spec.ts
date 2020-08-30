@@ -1,7 +1,8 @@
-import { DaysAgo } from './days-ago';
+import { DaysAgoPipe } from './days-ago';
 
 describe('DaysAgo', () => {
   it('should create an instance', () => {
-    expect(new DaysAgo()).toBeTruthy();
+    const pipe = new DaysAgoPipe();
+    expect(pipe).toBeTruthy();
   });
 });
