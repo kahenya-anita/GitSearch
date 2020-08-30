@@ -2,9 +2,35 @@
 <div class="container">
     <div class="menu">
         <ul>
-            <li>Home</li>
-            <li>Search User</li>
-            <li>Search Repository</li>
+            <li class="logo"><img src="../../../assets/img/logo.png"></li>
+           <a routerLink="/home" routerLinkActive="activeRoute"><li>Home</li></a>
+           <a (click)=toggleUserForm() *ngIf="!isShowUserForm"><li>Search User</li></a>
+           <form #userForm="ngForm" *ngIf="isShowUserForm">
+               <div class="input">
+                   <input type="text" class="form-control" placeholder="search by username">
+                   [(ngModel)]="username" name="username" style="background-color: transparent; color: white;">
+                   <div class="input-group-append">
+                     <button class="btn btn-outline-secondary" type="button" routerLink="/search-result"
+                      routerLinkActive="activeRoute" (click)="findProfile();toggleUserForm(); userForm.reset()"><a><i
+                          class="fas fa-search" style="width:0.4rem;"></i></a></button>
+                   </div>
+                </div>
+               </div>
+           </form>
+           <a (click)=toggleRepoForm() *ngIf="!isShowRepoForm"><li>Search Repository</li></a>
+         <form #repoForm="ngForm" *ngIf="isShowRepoForm">
+            <div class="input-group" style="width: 13rem">
+                <input type="text" class="form-control" placeholder="Search by reponame" aria-describedby="button-addon2"
+                [(ngModel)]="reponame" name="reponame" style="background-color: transparent; color: white;">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button" routerLink="/repo-result"
+                    routerLinkActive="activeRoute" (click)="findRepos(); toggleRepoForm(); repoForm.reset()"><a><i
+                        class="fas fa-search" style="width:0.4rem;"></i></a></button>
+                </div>
+            </div>  
+         </form>
+
+        
         </ul>
     </div>
 </div>
