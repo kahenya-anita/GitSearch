@@ -1,2 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&display=swap');
 
+#heading {
+    padding-top: 7%;
+    font-size: 3rem;
+    font-family: 'Comfortaa', cursive;
+}
+.card {
+    margin: 3%;
+    width: 21rem;
+    box-sizing: border-box;
+    font-family: 'comfortaa', cursive;
+}
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    background: none;
+}
