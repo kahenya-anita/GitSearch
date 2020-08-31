@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Users } from '../../Model/users';
-import { Repositories } from 'src/app/Model/repositories-by-name';
+import { RepositoriesByName } from 'src/app/Model/repositories-by-name';
 import { Repositories } from 'src/app/models/repositories'; 
 
 @Component({
@@ -10,9 +11,21 @@ import { Repositories } from 'src/app/models/repositories';
 })
 export class SearchresultComponent implements OnInit {
 
-  constructor() { }
+  repos:Repositories[];
+  user:Users;
+  username:string;  
 
-  ngOnInit(): void {
+  constructor( private route: ActivatedRoute, private searchGitService: SearchGitService ) {}
+
+  searchResult(){
+    this.username = this.route.snapshot.paramMap.get('username')
+    this.searchGitService.userInfoRequest(this.username)
+    this.user = this.searchGitService.user
+    this.searchGitService.userRepoRequest(this.username)
+    this.repos =this.searchGitService.repos
   }
 
+  ngOnInit(){
+    this.searchResult()
+  }
 }
