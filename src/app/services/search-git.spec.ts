@@ -1,7 +1,16 @@
-import { SearchGit } from './search-git';
+import { TestBed } from '@angular/core/testing';
 
-describe('SearchGit', () => {
-  it('should create an instance', () => {
-    expect(new SearchGit()).toBeTruthy();
+import { SearchGitService } from './search-git.service';
+
+describe('SearchGitService', () => {
+  let service: SearchGitService;
+
+  beforeEach(() => {
+    TestBed.configureTestingModule({});
+    service = TestBed.inject(SearchGitService);
+  });
+
+  it('should be created', () => {
+    expect(service).toBeTruthy();
   });
 });
