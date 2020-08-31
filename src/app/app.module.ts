@@ -8,6 +8,7 @@ import { ProfileComponent } from './Components/profile/profile.component';
 import { NavBarComponent } from './Components/nav-bar/nav-bar.component';
 import { RepoSearchComponent } from './Components/repo-search/repo-search.component';
 import { NotFoundComponent } from './Components/not-found/not-found/not-found.component';
+import { SearchresultComponent } from './Components/searchresult/searchresult.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { NotFoundComponent } from './Components/not-found/not-found/not-found.co
     ProfileComponent,
     NavBarComponent,
     RepoSearchComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    SearchresultComponent
   ],
   imports: [
     BrowserModule,
