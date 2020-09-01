@@ -7,7 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './Components/home/home.component';
-import { MatNavbarModule } from '@angular/material/nav-bar';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -20,7 +20,7 @@ import { NotFoundComponent } from './Components/not-found/not-found/not-found.co
 import { SearchresultComponent } from './Components/searchresult/searchresult.component';
 import { NgProgressModule } from '@ngx-progressbar/core';
 import { NgProgressHttpClientModule } from '@ngx-progressbar/http-client';
-import { VisitedRepositoryDirective } from './Directives/visited-repository.directive';
+import { VisitedRepository } from './Directives/visited-repository';
 
 
 @NgModule({
@@ -32,13 +32,13 @@ import { VisitedRepositoryDirective } from './Directives/visited-repository.dire
     NavBarComponent,
     RepoSearchComponent,
     NotFoundComponent,
-    VisitedRepositoryDirective,
+    VisitedRepository,
     SearchresultComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MatNavbarModule,
+    MatToolbarModule,
     MatTabsModule,
     MatFormFieldModule,
     MatInputModule,
