@@ -7,13 +7,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './Components/home/home.component';
-import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatnavbarModule } from '@angular/material/navbar';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { ProfileComponent } from './Components/profile/profile.component';
-import { DaysAgoPipe } from './pipes/days-ago';
+import { DaysAgoPipe } from './pipe/days-ago';
 import { NavBarComponent } from './Components/nav-bar/nav-bar.component';
 import { RepoSearchComponent } from './Components/repo-search/repo-search.component';
 import { NotFoundComponent } from './Components/not-found/not-found/not-found.component';
@@ -38,7 +38,7 @@ import { VisitedRepositoryDirective } from './Directives/visited-repository.dire
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MatToolbarModule,
+    MatnavbarModule,
     MatTabsModule,
     MatFormFieldModule,
     MatInputModule,
