@@ -16,3 +16,37 @@
     flex-wrap: wrap;
     background: none;
 }
+a {
+    text-decoration: none;
+    color: #3f51b5;
+    font-weight: bold;
+    letter-spacing: 0.05rem;
+  }
+  
+a:hover {
+    text-decoration: underline;
+  }
+  
+.card-header {
+    padding: 0.5rem;
+  }
+  
+.card-bottom {
+    display: flex;
+  }
+  
+.userInfo {
+    margin: 4%;
+    margin-left: 5%;
+  }
+  
+.userInfo span {
+    color: #3f51b5;
+    font-weight: bold;
+    letter-spacing: 0.05rem;
+  }
+  
+.fas {
+    font-size: 0.9rem;
+  }
+  
