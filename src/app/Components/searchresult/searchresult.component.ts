@@ -1,8 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Users } from '../../Model/users';
-import { RepositoriesByName } from 'src/app/Model/repositories-by-name';
-import { Repositories } from 'src/app/models/repositories'; 
+import { RepositoriesByName } from '../../Model/repositories-by-name';
+import { Repositories } from '../../Model/repositories'; 
 import { SearchGitService } from 'src/app/services/search-git';
 
 @Component({
