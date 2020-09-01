@@ -6,7 +6,6 @@ import { Repositories } from '../Model/repositories';
 import { ActivatedRoute } from '@angular/router';
 import { RepositoriesByName } from '../Model/repositories-by-name';
 import { NumberOfRepos } from '../Model/number-of-repos';
-
 @Injectable({
   providedIn: 'root'
 })
